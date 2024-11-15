@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "leshy"
+version = "0.1.0"
+description = ""
+authors = ["Ivan Bachyla <ivan.bachyla@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastapi = "^0.115.5"
+httpx = "^0.27.2"
+pydantic = "^2.9.2"
+uvicorn = "^0.32.0"
+recipe-scrapers = "^15.2.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pre-commit = "^4.0.1"
+flake8 = "^7.1.1"
+flake8-bugbear = "^24.10.31"
+flake8-docstrings = "^1.7.0"
+flake8-comprehensions = "^3.16.0"
+black = "^24.10.0"
+mypy = "^1.13.0"
+pylint = "^3.3.1"
+bandit = "^1.7.10"
+pytest-html = "^4.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
