@@ -1,0 +1,45 @@
+repos:
+  # Black - Code Formatter
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        args: [ "--line-length=100" ]
+
+  # Flake8 - Linter for Style and Quality
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+        additional_dependencies:
+          - flake8-bugbear
+          - flake8-docstrings
+          - flake8-comprehensions
+
+  # Mypy - Static Type Checker
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.13.0
+    hooks:
+      - id: mypy
+        args: [ "--ignore-missing-imports" ]
+
+  # Pylint - Comprehensive Code Quality Checker
+  - repo: https://github.com/pylint-dev/pylint
+    rev: v3.3.1
+    hooks:
+      - id: pylint
+        args: [ "--disable=R,C" ]
+
+  # Bandit - Security Linter
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.10
+    hooks:
+      - id: bandit
+        args: [ "-r", "app" ]
+
+  # Poetry Check - Validates pyproject.toml
+  - repo: https://github.com/python-poetry/poetry
+    rev: 1.8.4
+    hooks:
+      - id: poetry-check
+      - id: poetry-lock
