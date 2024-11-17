@@ -1,0 +1,13 @@
+version: 2
+updates:
+  # Check for dependency updates in the Poetry `pyproject.toml` file
+  - package-ecosystem: "pip"
+    directory: "/"  # Root directory of the repository
+    schedule:
+      interval: "weekly"  # Options: daily, weekly, monthly
+
+  # Check for GitHub Actions workflow updates
+  - package-ecosystem: "github-actions"
+    directory: "/"  # Root directory where `.github/workflows` are located
+    schedule:
+      interval: "monthly"  # Options: daily, weekly, monthly
